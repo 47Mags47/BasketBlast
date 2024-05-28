@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->foreignId('sender_id')->constrained('users');
-            $table->foreignId('picipient_id')->constrained('users');
+            $table->foreignId('recipient_id')->constrained('users');
             $table->string('massege');
             $table->string('is_image');
         });

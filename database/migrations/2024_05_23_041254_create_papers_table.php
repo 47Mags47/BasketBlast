@@ -16,8 +16,8 @@ return new class extends Migration
             $table->timestamps();
             $table->string('title');
             $table->text('body');
-            $table->integer('like');
-            $table->integer('view');
+            $table->integer('likes');
+            $table->integer('views');
         });
     }
 

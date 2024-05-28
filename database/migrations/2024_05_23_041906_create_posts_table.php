@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('creator')->constrained('users');
+            $table->foreignId('creator_id')->constrained('users');
             $table->string('body');
-            $table->string('like');
-            $table->string('view');
+            $table->string('likes');
+            $table->string('views');
             
         });
     }

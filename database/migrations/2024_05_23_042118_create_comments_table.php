@@ -17,7 +17,6 @@ return new class extends Migration
             $table->integer('like');
             $table->integer('view');
             $table->string('body');
-            $table->foreignId('user_id')->constrained('users');
             $table->foreignId('paper_id')->constrained('papers');
         });
     }
