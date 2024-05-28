@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\papersController;
+use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,6 @@ Route::get('/', function () {
 });
 
 Route::get('/index', [papersController::class, 'index'])->name('home');
+
+
+Route::get('/posts', [PostsController::class, 'index'])->name('posts');

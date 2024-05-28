@@ -1,0 +1,91 @@
+.paper
+    display: flex
+    padding: 100px 50px
+    flex-direction: column
+    gap: 15px
+    .title
+        font-size: 1.5rem
+        font-weight: bold
+        text-indent: 2rem
+    .date-time
+        font-weight: bold
+        color: #999
+        text-transform: uppercase
+        font-size: 0.7rem
+        text-align: center
+    img
+        width: 100%
+        height: auto
+        max-height: 600px
+        background-color: #fff
+    .text
+        padding: 10px 15px
+        display: flex
+        flex-direction: column
+        gap: 10px
+        p
+            text-indent: 1rem
+
+.comments
+    padding: 10px 100px
+    display: flex
+    flex-direction: column
+    gap: 15px
+    li
+        display: grid
+        box-shadow: 4px 4px 12px 4px #eee
+        padding: 5px
+        border-radius: 7px
+        grid-template-areas: 'A B' 'A C' 'A D'
+        grid-template-columns: 60px auto
+        grid-template-rows:  1rem auto 1rem
+        .logo
+            width: 100%
+            height: 100%
+            display: grid
+            padding: 5px
+            justify-content: center
+            grid-area: A
+            img
+                width: 100%
+                height: 50px
+                border-radius: 50%
+        .sender
+            grid-area: B
+            a
+                position: relative
+                font-size: 1.1rem
+                line-height: 1rem
+                color: #222
+                &::before
+                    content: '' 
+                    display: block
+                    position: absolute
+                    top: 100%
+                    left: 0
+                    width: 0
+                    height: 2px
+                    background: #3754e9
+                    transition: .5s
+                &:hover 
+                    &::before
+                        width: 100%
+
+
+        .massege
+            text-indent: 1rem
+            padding: 5px 0
+        .date-time
+            font-weight: bold
+            color: #999
+            text-transform: uppercase
+            font-size: 0.7rem
+            text-align: right
+
+
+
+
+
+
+
+
