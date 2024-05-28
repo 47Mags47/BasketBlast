@@ -1,0 +1,65 @@
+body
+    display: grid
+    grid-template-rows: 50px auto 500px
+    
+.papers
+    width: 100%
+    padding: 15px
+    display: grid
+    grid-template-areas: 'A B C' 'A D C' 'E D F' 'E G F'
+    grid-template-columns: auto auto auto
+    grid-template-rows: 210px
+    background: #eee
+    gap: 8px 3px
+    a
+        background: inherit
+        transition: .2s
+        z-index: 1
+        cursor: pointer
+
+        &:nth-child(1)
+            grid-area: A
+        &:nth-child(2)
+            grid-area: B
+        &:nth-child(3)
+            grid-area: C
+        &:nth-child(4)
+            grid-area: D
+        &:nth-child(5)
+            grid-area: E
+        &:nth-child(6)
+            grid-area: F
+        &:hover
+            box-shadow: 0 0 15px 3px #ccc
+            z-index: 2
+            .paper-header h2
+                text-decoration: underline
+        .paper
+            width: 100%
+            height: 100%
+            display: flex
+            flex-direction: column
+            padding: 7px 10px
+            position: relative
+            padding-bottom: 15px
+            .paper-body
+                padding: 10px 0
+                img
+                    width: 100%
+                    display: block
+                p
+                    padding: 5px 10px
+                    text-indent: 1.5rem
+                    max-height: 100px
+                    overflow: hidden
+                    text-overflow: ellipsis
+                    color: #0a0a0a
+                    .question
+                        color: #0f0f0f
+                        font-size: 16px
+                        bold: normal
+            .paper-footer
+                position: absolute
+                bottom: 5px
+                right: 5px
+                height: 15px

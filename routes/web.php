@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\papersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('home');
 });
+
+Route::get('/index', [papersController::class, 'index'])->name('home');
