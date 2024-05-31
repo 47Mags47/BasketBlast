@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\papersController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\RegistrationController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EntranceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +23,8 @@ Route::get('/', function () {
 
 Route::get('/index', [papersController::class, 'index'])->name('home');
 
-
 Route::get('/posts', [PostsController::class, 'index'])->name('posts');
+
+Route::get('/registration', [RegistrationController::class, 'index'])->name('registration');
+
+Route::get('/entrance', [EntranceController::class, 'index'])->name('entrance');
