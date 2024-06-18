@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('papers', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('image')->nullable();
             $table->string('title');
             $table->text('body');
             $table->integer('likes');

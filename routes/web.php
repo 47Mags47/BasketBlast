@@ -21,10 +21,16 @@ Route::get('/', function () {
     return redirect()->route('home');
 });
 
-Route::get('/index', [papersController::class, 'index'])->name('home');
 
-Route::get('/posts', [PostsController::class, 'index'])->name('posts');
 
-Route::get('/registration', [RegistrationController::class, 'index'])->name('registration');
+Route::middleware('guest')->group(function () {
+    Route::get('/index', [papersController::class, 'index'])->name('home');
+    Route::get('/posts', [PostsController::class, 'index'])->name('posts');
+    Route::get('/register', [RegistrationController::class, 'register'])->name('register');
+    Route::post('/register', [RegistrationController::class, 'registration']);
+    Route::get('/entrance', [EntranceController::class, 'entrance'])->name('entrance');
+    Route::post('/entrance', [EntranceController::class, 'login']);
+});
 
-Route::get('/entrance', [EntranceController::class, 'index'])->name('entrance');
+Route::middleware('auth')->group(function () {
+});

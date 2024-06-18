@@ -16,6 +16,6 @@
             <img class="logotipe" src="" alt="">
             <span>Гордиенко К.А.</span>
         </a>
-        <a href="{{ route('registration')}}" class="login-button">Войти</a>
+        <a href="{{ route('register')}}" class="login-button">Войти</a>
     </div>
 </header>
